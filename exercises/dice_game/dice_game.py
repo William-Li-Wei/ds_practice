@@ -13,8 +13,10 @@ def roll_dices_for_sum():
         result(int): the sum of all numbers
     """
 
-    #  TODO: get a random number for each dice and sum them up
-    result = None
+    d1 = random.randint(1, 6)
+    d2 = random.randint(1, 6)
+
+    result = d1 + d2
 
     return result
 
@@ -36,8 +38,16 @@ def get_profit(the_sum: int):
         profit(float): the profit of the current round
     """
 
-    #  TODO: find and return the correct profit according to the_sum
-    profit = None
+    if 2 <= the_sum <=6:
+        profit = -0.5
+    elif 7 <= the_sum <= 9:
+        profit = 0
+    elif the_sum == 10:
+        profit = 0.5
+    elif the_sum == 11:
+        profit = 1.0
+    elif the_sum == 12:
+        profit = 1.5
 
     return profit
 
